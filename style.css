@@ -440,6 +440,7 @@ textarea:focus { outline: 1px solid var(--accent); }
 
   .export-actions {
     width: 100%;
+    display: none;
   }
 
   .export-actions .btn {
