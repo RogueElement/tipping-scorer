@@ -410,6 +410,96 @@ textarea:focus { outline: 1px solid var(--accent); }
   .ladder-grid { grid-template-columns: 1fr 1fr; }
 }
 
+@media (max-width: 700px) {
+  .scoring-sidebar,
+  .ladder-sidebar {
+    width: 100%;
+    position: static;
+  }
+
+  .leaderboard-toolbar {
+    align-items: stretch;
+  }
+
+  .export-actions {
+    width: 100%;
+  }
+
+  .export-actions .btn {
+    flex: 1 1 0;
+    justify-content: center;
+  }
+
+  .leaderboard thead {
+    display: none;
+  }
+
+  .leaderboard,
+  .leaderboard tbody,
+  .leaderboard tr,
+  .leaderboard td {
+    display: block;
+    width: 100%;
+  }
+
+  .leaderboard tbody tr {
+    border: 1px solid rgba(30,58,95,0.5);
+    border-radius: 10px;
+    margin-bottom: 10px;
+    padding: 10px;
+    background: rgba(7,15,30,0.55);
+  }
+
+  .leaderboard tbody tr:hover {
+    background: rgba(7,15,30,0.75);
+  }
+
+  .leaderboard td {
+    border: none;
+    padding: 5px 0;
+    min-width: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 10px;
+  }
+
+  .leaderboard td::before {
+    content: attr(data-label);
+    color: var(--muted);
+    font-size: 0.74rem;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    flex: 0 0 auto;
+  }
+
+  .rank-cell,
+  .score-cell,
+  .num-cell,
+  .name-cell {
+    text-align: right;
+    font-size: 0.95rem;
+  }
+
+  .chips-cell {
+    display: block;
+    line-height: 1.6;
+    min-width: 0;
+    padding-top: 8px;
+  }
+
+  .chips-cell::before {
+    display: block;
+    margin-bottom: 6px;
+  }
+
+  .chip {
+    font-size: 0.72rem;
+    margin: 2px 4px 2px 0;
+    padding: 3px 7px;
+  }
+}
+
 @media print {
   @page {
     size: A4 landscape;

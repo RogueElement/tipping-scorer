@@ -422,13 +422,13 @@ function renderLeaderboard() {
 
     return `
       <tr class="${rowClass}">
-        <td class="rank-cell">${rankIcon(p.rank)}</td>
-        <td class="name-cell">${esc(p.name)}</td>
-        <td class="score-cell">${ladderSet ? p.totalScore : '—'}</td>
-        <td class="num-cell">${ladderSet ? `${p.correctCount}/8` : '—'}</td>
-        <td class="num-cell">${ladderSet ? p.top4Count : '—'}</td>
-        <td class="num-cell">${ladderSet ? p.top2Count : '—'}</td>
-        <td class="chips-cell">${chips}</td>
+        <td class="rank-cell" data-label="Rank">${rankIcon(p.rank)}</td>
+        <td class="name-cell" data-label="Name">${esc(p.name)}</td>
+        <td class="score-cell" data-label="Score">${ladderSet ? p.totalScore : '—'}</td>
+        <td class="num-cell" data-label="Correct">${ladderSet ? `${p.correctCount}/8` : '—'}</td>
+        <td class="num-cell" data-label="Top 4">${ladderSet ? p.top4Count : '—'}</td>
+        <td class="num-cell" data-label="Top 2">${ladderSet ? p.top2Count : '—'}</td>
+        <td class="chips-cell" data-label="Picks">${chips}</td>
       </tr>
     `;
   }).join('');
