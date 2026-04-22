@@ -355,6 +355,9 @@ textarea:focus { outline: 1px solid var(--accent); }
   opacity: 0.65;
 }
 
+.mobile-picks { display: none; }
+.desktop-picks { display: block; }
+
 /* ── Status & misc ── */
 .status {
   display: inline-block;
@@ -489,8 +492,44 @@ textarea:focus { outline: 1px solid var(--accent); }
   }
 
   .chips-cell::before {
+    display: none;
+  }
+
+  .desktop-picks {
+    display: none;
+  }
+
+  .mobile-picks {
     display: block;
-    margin-bottom: 6px;
+  }
+
+  .mobile-picks summary {
+    list-style: none;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.75rem;
+    font-weight: 600;
+    color: var(--text);
+    background: #070f1e;
+    border: 1px solid var(--border);
+    border-radius: 999px;
+    padding: 6px 10px;
+    cursor: pointer;
+  }
+
+  .mobile-picks summary::-webkit-details-marker {
+    display: none;
+  }
+
+  .mobile-picks[open] summary {
+    color: var(--accent);
+    border-color: var(--accent);
+  }
+
+  .mobile-picks-body {
+    margin-top: 8px;
+    line-height: 1.55;
   }
 
   .chip {

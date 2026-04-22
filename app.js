@@ -428,7 +428,13 @@ function renderLeaderboard() {
         <td class="num-cell" data-label="Correct">${ladderSet ? `${p.correctCount}/8` : '—'}</td>
         <td class="num-cell" data-label="Top 4">${ladderSet ? p.top4Count : '—'}</td>
         <td class="num-cell" data-label="Top 2">${ladderSet ? p.top2Count : '—'}</td>
-        <td class="chips-cell" data-label="Picks">${chips}</td>
+        <td class="chips-cell" data-label="Picks">
+          <div class="desktop-picks">${chips}</div>
+          <details class="mobile-picks">
+            <summary>Show picks</summary>
+            <div class="mobile-picks-body">${chips}</div>
+          </details>
+        </td>
       </tr>
     `;
   }).join('');
