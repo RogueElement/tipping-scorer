@@ -378,6 +378,19 @@ textarea:focus { outline: 1px solid var(--accent); }
   display: none;
 }
 
+.site-footnote {
+  max-width: 1600px;
+  margin: 0 auto 18px;
+  padding: 0 16px;
+}
+
+.site-footnote p {
+  font-size: 0.74rem;
+  color: var(--muted);
+  opacity: 0.9;
+  text-align: center;
+}
+
 /* ── Scoring key ── */
 .scoring-key {
   display: flex;
@@ -411,6 +424,7 @@ textarea:focus { outline: 1px solid var(--accent); }
   .page-layout { padding: 16px 10px; }
   .card { padding: 16px; }
   .ladder-grid { grid-template-columns: 1fr 1fr; }
+  .site-footnote { padding: 0 10px; }
 }
 
 @media (max-width: 700px) {
@@ -554,7 +568,8 @@ textarea:focus { outline: 1px solid var(--accent); }
   .scoring-sidebar,
   .ladder-sidebar,
   .no-print,
-  .last-updated {
+  .last-updated,
+  .site-footnote {
     display: none !important;
   }
 
