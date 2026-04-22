@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NRL Top 8 Tipping Scorer</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>🏉 NRL Top 8 Tipping Scorer</h1>
+    <p class="subtitle">Season-end ladder prediction scoring</p>
+  </header>
+
+  <div class="page-layout">
+    <!-- Left sidebar: Scoring info -->
+    <aside class="scoring-sidebar">
+      <section class="card" id="scoring-section">
+        <h2>Scoring</h2>
+        <p class="scoring-intro">Pick the 8 teams that finish the season in the top 8. Points are awarded for each correct pick based on final ladder position.</p>
+        <div class="scoring-table">
+          <div class="scoring-row header-row">
+            <span>Position</span><span>Points</span>
+          </div>
+          <div class="scoring-row top8-row"><span>1st</span><span>28</span></div>
+          <div class="scoring-row top8-row"><span>2nd</span><span>27</span></div>
+          <div class="scoring-row top8-row"><span>3rd</span><span>26</span></div>
+          <div class="scoring-row top8-row"><span>4th</span><span>25</span></div>
+          <div class="scoring-row top8-row"><span>5th</span><span>24</span></div>
+          <div class="scoring-row top8-row"><span>6th</span><span>23</span></div>
+          <div class="scoring-row top8-row"><span>7th</span><span>22</span></div>
+          <div class="scoring-row top8-row"><span>8th</span><span>21</span></div>
+          <div class="scoring-row miss-row"><span>Outside top 8</span><span>0</span></div>
+        </div>
+        <p class="scoring-note">Tiebreakers (in order): correct count &rarr; positional bonus &rarr; top 4 picks &rarr; top 2 picks &rarr; best single position.</p>
+      </section>
+    </aside>
+
+    <!-- Sidebar: Ladder -->
+    <aside class="ladder-sidebar">
+      <section class="card" id="ladder-section">
+        <h2>NRL Ladder</h2>
+        <div class="round-selector">
+          <label for="round-select">Round</label>
+          <select id="round-select" onchange="applyRound(this.value)">
+            <option value="">— loading —</option>
+          </select>
+        </div>
+        <div class="ladder-grid" id="ladder-grid"></div>
+      </section>
+    </aside>
+
+    <!-- Main content -->
+    <main>
+      <!-- Leaderboard -->
+      <section class="card" id="leaderboard-section">
+        <h2>Leaderboard</h2>
+        <div id="leaderboard-wrap">
+          <p class="empty-state">Load tips and set the ladder to see scores.</p>
+        </div>
+      </section>
+    </main>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
